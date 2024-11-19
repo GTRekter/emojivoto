@@ -9,6 +9,8 @@ kind: Deployment
 metadata:
   name: emoji
   namespace: emojivoto
+  annotations:
+    buoyant.cloud/tags: env:prod
   labels:
     app.kubernetes.io/name: emoji
     app.kubernetes.io/part-of: emojivoto
