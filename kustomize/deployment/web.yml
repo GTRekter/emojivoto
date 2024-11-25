@@ -24,6 +24,13 @@ spec:
       labels:
         app: web-svc
         version: v11
+      annotations:
+        linkerd.io/inject: enabled
+        config.linkerd.io/proxy-log-level: debug
+        config.linkerd.io/disable-heartbeat: "true"
+        config.linkerd.io/proxy-cpu-limit: "500m"
+        config.linkerd.io/proxy-memory-limit: "128Mi"
+        config.alpha.linkerd.io/proxy-enable-native-sidecar: true
     spec:
       serviceAccountName: web
       containers:
